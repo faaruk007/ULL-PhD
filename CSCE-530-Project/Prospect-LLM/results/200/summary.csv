@@ -1,5 +1,0 @@
-scheduler,n_completed,slo_combined_pct,slo_violation_pct,slo_ttft_pct,slo_tpot_pct,ttft_mean_s,ttft_p50_s,ttft_p99_s,tpot_p90_ms,reasoning_tokens_mean,answering_tokens_mean,wall_time_s
-fcfs,200,21.0,79.0,21.5,96.3,62.789,65.323,119.803,54.988,722.725,97.62,324.94
-rr,200,21.0,79.0,21.5,96.3,63.226,65.69,120.826,55.105,722.725,97.62,325.97
-pascal,200,21.0,79.0,21.5,96.3,63.449,65.883,121.667,55.343,722.725,97.62,326.81
-prospect,200,67.0,33.0,68.5,96.47,62.671,23.261,254.84,53.532,721.785,99.63,338.11
