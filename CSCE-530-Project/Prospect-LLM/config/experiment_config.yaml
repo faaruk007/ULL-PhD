@@ -1,0 +1,38 @@
+model:
+  name: "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+  dtype: "float16"
+  max_model_len: 8192
+  gpu_memory_utilization: 0.88
+  tensor_parallel_size: 1
+
+serving:
+  max_concurrent_requests: 16
+  token_quantum: 500         # RR token budget per turn
+  max_new_tokens: 2048
+  temperature: 0.0
+
+slo:
+  ttft_threshold_s: 30.0     # max acceptable TTFT (seconds)
+  tpot_threshold_ms: 150.0   # max acceptable TPOT (ms/token)
+  qoe_threshold: 0.95        # min QoE for SLO pass
+  target_tpot_ms: 100.0      # user's expected token rate
+
+workload:
+  num_requests: 200
+  arrival_rate_rps: 1.0      # requests per second (Poisson)
+  seed: 42
+
+prospect:
+  short_reasoning_threshold: 512    # tokens
+  long_reasoning_threshold: 2048    # tokens
+  max_concurrent_long: 4            # max Long requests active simultaneously
+  speculative_window_frac: 0.85     # start speculative action at 85% of predicted length
+
+pascal:
+  demotion_threshold_tokens: 5000   # demote to low-priority if reasoning > this
+
+paths:
+  hf_home: "/ddnB/work/faaruk/.cache/huggingface"
+  results_dir: "results"
+  figures_dir: "figures"
+  log_dir: "/ddnB/work/faaruk/jitserve_slurm_logs"

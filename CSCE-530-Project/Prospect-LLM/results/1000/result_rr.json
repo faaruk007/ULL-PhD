@@ -1,0 +1,23 @@
+{
+  "scheduler": "rr",
+  "n_total": 1000,
+  "n_completed": 1000,
+  "ttft_mean_s": 291.747,
+  "ttft_p50_s": 297.337,
+  "ttft_p90_s": 537.958,
+  "ttft_p99_s": 580.395,
+  "tpot_mean_ms": 31.084,
+  "tpot_p90_ms": 55.855,
+  "qoe_mean": 0.984,
+  "slo_ttft_pct": 5.3,
+  "slo_tpot_pct": 96.38,
+  "slo_qoe_pct": 98.4,
+  "slo_combined_pct": 5.1,
+  "slo_violation_pct": 94.9,
+  "reasoning_tokens_mean": 715.431,
+  "reasoning_tokens_p90": 1024.0,
+  "answering_tokens_mean": 110.49,
+  "total_tokens": 825921,
+  "wall_time_s": 1611.51,
+  "batch_count": 125
+}

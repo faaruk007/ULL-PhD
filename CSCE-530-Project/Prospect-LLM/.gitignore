@@ -1,0 +1,5 @@
+results/workload_*.json
+__pycache__/
+*.pyc
+.cache/
+*.log
